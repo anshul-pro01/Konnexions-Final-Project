@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+ <script>
+     function my(){
+    var x=document.getElementById("name").textContent;
+   var pass=document.getElementById("pwd").textContent;
+    if(x.localeCompare(pass)){
+       alert("User name and password cannot be same");
+    }
+    else{
+      alert("Sign Up done successfully");
+        window.open("videogallery.html");
+    }
+     }
+ </script>
+</head>
+<body style="background:linear-gradient(to left,navy,midnightblue,black);">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Konnexions</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="game.html">Tic Tac Toe </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="click.html">Click Counter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="videogallery.html">Video Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Image Gallery</a>
+                            </li>
+                            <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Sign Up<span class="sr-only">(current)</span></a>
+                                </li>
+                    </ul>
+                    
+                </div>
+            </nav><br>
+<div class="container">
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+                <h1 align="center" style="color:khaki">Sign Up to NCS for more MUSIC...</h1>
+
+                <div class="card">
+                       <div class="card-header">
+                            Register
+                       </div> 
+                        <div class="card-body">
+                            <form action="videogallery.html" method="POST" onsubmit="my()">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <small id="nameHelp" class="form-text text-muted">Write your full name.</small>
+                                </div>
+                                <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <small id="nameHelp" class="form-text text-muted">Write your full email id</small>
+                                    </div>
+                                <div class="form-group">
+                                        <label for="pwd">Password</label>
+                                        <input type="password" class="form-control" id="pwd" name="pwd" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+                                        <small id="nameHelp" class="form-text text-muted">Password should contain atleast 8 characters</small>
+                                    </div>
+                     
+                                <div class="btn">              
+                                <button type="button" name="submit" id="submit" class="btn btn-success" onclick="my()">Submit</button>
+                                </div>         
+                                <input type="reset" name="reset" id="reset" class="btn btn-danger">
+                            </form>
+                        </div>
+
+                </div>
+             
+         </div>
+    </div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

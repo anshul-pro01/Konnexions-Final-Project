@@ -1,0 +1,196 @@
+<! DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Tic Tac Toe Game</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script>
+        var block;
+        var as = 0;
+        var bs = 0;
+        var click = "X";
+
+
+        function play(block) {
+            if (block.value == "+") {
+                block.value = click;
+                if (click == "X") {
+                    click = "O";
+                }
+                else {
+                    click = "X";
+                }
+
+                var a = document.getElementById("first").value;
+                var b = document.getElementById("second").value;
+                var c = document.getElementById("third").value;
+                var d = document.getElementById("fourth").value;
+                var e = document.getElementById("fifth").value;
+                var f = document.getElementById("sixth").value;
+                var g = document.getElementById("seventh").value;
+                var h = document.getElementById("eight").value;
+                var i = document.getElementById("ninth").value;
+                if ((a == "X" && b == "X" && c == "X") || (d == "X" && e == "X" && f == "X") || (g == "X" && h == "X" && i == "X") ||
+                    (a == "X" && d == "X" && g == "X") || (b == "X" && e == "X" && h == "X") || (c == "X" && f == "X" && i == "X") ||
+                    (a == "X" && e == "X" && i == "X") || (c == "X" && e == "X" && g == "X") ||
+                    (a == "O" && b == "O" && c == "O") || (d == "O" && e == "O" && f == "O") || (g == "O" && h == "O" && i == "O") ||
+                    (a == "O" && d == "O" && g == "O") || (b == "O" && e == "O" && h == "O") || (c == "O" && f == "O" && i == "O") ||
+                    (a == "O" && e == "O" && i == "O") || (c == "O" && e == "O" && g == "O")) {
+                        
+                    if (block.value == "X") {
+                        as++;
+                        document.getElementById("x").value = as;
+                    }
+                    else {
+                        bs++;
+                        document.getElementById("y").value = bs;
+                    }
+                    alert("Player " + block.value + " wins the game!");
+                }
+                else {
+                    if (a != "+" && b != "+" && c != "+" && d != "+" && e != "+" && f != "+" && g != "+" && h != "+" && i != "+") {
+                        alert("Its a draw");
+                    }
+
+                }
+
+            }
+
+        }
+        function r() {
+            var a = document.getElementById("first");
+            var b = document.getElementById("second");
+            var c = document.getElementById("third");
+            var d = document.getElementById("fourth");
+            var e = document.getElementById("fifth");
+            var f = document.getElementById("sixth");
+            var g = document.getElementById("seventh");
+            var h = document.getElementById("eight");
+            var i = document.getElementById("ninth");
+            a.value = b.value = c.value = d.value = e.value = f.value = g.value = h.value = i.value = "+";
+
+
+        }
+
+        function c() {
+            r();
+            document.getElementById("x").value = 0;
+            document.getElementById("y").value = 0;
+        }
+
+    </script>
+    <style>
+        body {
+            background-image: linear-gradient(45deg,midnightblue,black);
+        }
+
+        .tcard {
+            position: relative;
+            padding: 20px;
+            width: 50vw;
+            top: 5vw;
+            left: 25vw;
+            background-color:rgba(255, 255, 255, 0.432);
+            border-radius: 6px;
+        }
+        input[type=button].block{
+            background-color: midnightblue;
+            color: whitesmoke;
+            font-family:Algerian;
+            padding:3px;
+            font-size:30px;
+            width:55px;
+            height:40px;
+            border: 2px solid midnightblue;
+            border-radius: 5px;
+            box-shadow: 0 4px 4px 0 rgba(0,0,0,0.4);
+            margin: 8px;
+        }
+        input[type=button].block:hover{
+            cursor: pointer;
+            border: 2px solid rgb(19, 196, 19);
+            transition: 0.5s;
+        }
+        input[type=text]{
+            width:120px;
+            height:80px;
+            background:linear-gradient(to top,lightblue,white);
+            color:purple;
+            font-family: Arial;
+            font-size: 50px;
+            padding: 5px;
+            margin:10px;
+            border: 2px solid lightblue;
+            border-radius:6px;
+        }
+
+        input[type=button].n{
+            background-color:rgb(54, 46, 46);
+            color: white;
+            width: 100px;
+            height: 30px;
+            border: 2px solid rgb(54, 49, 49);
+            border-radius: 3px;
+            margin: 10px;
+            cursor:pointer;
+        }     
+        input[type=button].n:hover{
+            background-color:midnightblue;
+            color: khaki;
+            border: 2px solid khaki;
+            transition: 0.5s;
+        }   
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="Index1.html">Konnexions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="game.html">Tic Tac Toe <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="click.html">Click Counter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="videogallery.html">Video Gallery</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="image.html">Image Gallery</a>
+                    </li>
+               
+            </ul>
+        </div>
+    </nav><br>
+    <center><h1 style="color:khaki;font-family:Comic Sans MS;top:8vw">Tic Tac Toe Game</h1></center>
+    <div class="tcard">
+        <center>
+            <input type="button" class="block" id="first" value="+" onclick="play(this)">
+            <input type="button" class="block" id="second" value="+" onclick="play(this)">
+            <input type="button" class="block" id="third" value="+" onclick="play(this)"><br><br>
+            <input type="button" class="block" id="fourth" value="+" onclick="play(this)">
+            <input type="button" class="block" id="fifth" value="+" onclick="play(this)">
+            <input type="button" class="block" id="sixth" value="+" onclick="play(this)"><br><br>
+            <input type="button" class="block" id="seventh" value="+" onclick="play(this)">
+            <input type="button" class="block" id="eight" value="+" onclick="play(this)">
+            <input type="button" class="block" id="ninth" value="+" onclick="play(this)"><br><br>
+
+        </center>
+        <center><label style="color:crimson;font-family:Comic Sans MS;font-size:23px">X wins</label><input type="text" id="x" size=10 value=0 disabled>
+            <label style="color:crimson;font-family:Comic Sans MS;font-size:23px">O wins</label><input type="text" id="y" size=10 value=0 disabled><br><br>
+            <input type="button" class="n" id="next" value="Next game" onclick="r()">
+            <input type="button" class="n" id="new" value="New game" onclick="c()"></center>
+    </div>
+</body>
+
+</html>
